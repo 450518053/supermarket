@@ -1,0 +1,997 @@
+/*
+*查询分组样式
+*/
+.groupinfodiv {
+	font-family: 微软雅黑;
+	font-size: 13px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	width: 600px;
+	height: 500px
+}
+
+.groupinfodiv2 {
+	float: left;
+	margin-left: 200px;
+}
+
+.groupinfodiv3 {
+	width: 100%;
+	margin-top: 40px;
+}
+
+/*
+*查询用户样式
+*/
+.usertable {
+	font-family: 微软雅黑;
+	font-size: 13px;
+	margin-left: 240px;
+	margin-top: 10px;
+	line-height: 30px;
+}
+
+.userselect {
+	width: 150px;
+	vertical-align: middle;
+}
+
+/*
+*查询客户所在分组
+*/
+.cusgrouptable {
+	font-family: 微软雅黑;
+	font-size: 13px;
+	margin-left: 120px;
+	margin-right: 120px;
+	margin-top: 10px;
+	line-height: 30px
+}
+
+.cusgrouptable td:nth-child(1) {
+	text-align: right;
+}
+
+.cusgroupselect {
+	width: 150px;
+}
+
+.cusgroupdiv {
+	margin-left: 260px;
+}
+
+/*
+*查询角色权限
+*/
+.roletable {
+	font-family: 微软雅黑;
+	font-size: 13px;
+	margin-left: 240px;
+	margin-top: 10px;
+	line-height: 30px;
+}
+
+.roleselect {
+	width: 150px;
+	vertical-align: middle;
+}
+
+.rolediv {
+	margin-left: 260px;
+	margin-top: 10px;
+}
+/*
+*查看申请
+*/
+.applytable {
+	font-family: 微软雅黑;
+	font-size: 13px;
+	line-height: 30px;
+}
+
+.formdiv {
+	margin-top: 30px;
+}
+
+.esaydiv {
+	position: relative;
+	border: 1px solid #95B8E7;
+	background-color: #fff;
+	vertical-align: middle;
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	margin: 0;
+	padding: 0;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;
+	margin-top: 5px;
+	width: 300px;
+	height: 300px;
+}
+
+.tablediv {
+	margin-left: 70px;
+}
+
+.save {
+	margin-left: 30px;
+	margin-top: 30px;
+}
+
+.table {
+	line-height: 25px;
+}
+
+.table2 {
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 25px;
+}
+
+.tablesave {
+	margin-left: 200px;
+	margin-top: 20px;
+}
+
+.tablesave2 {
+	margin-left: 300px;
+	margin-top: 10px;
+}
+
+.table tr td:nth-child(1) {
+	text-align: right;
+}
+
+.table2 tr td:nth-child(1) {
+	text-align: right;
+	width: 40%
+}
+
+select {
+	width: 150px;
+	vertical-align: middle;
+}
+
+.easyui-datagrid {
+	width: 100%;
+	min-height: 80%;
+}
+/*
+*弹窗css
+*/
+.verticalAlign {
+	vertical-align: middle;
+	display: inline-block;
+	height: 100%;
+	margin-left: -1px;
+}
+
+.xcConfirm .xc_layer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #ffffff;
+	opacity: 0.5;
+	z-index: 2147000000;
+}
+
+.xcConfirm .popBox {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	background-color: #ffffff;
+	z-index: 2147000001;
+	width: 570px;
+	height: 300px;
+	margin-left: -285px;
+	margin-top: -150px;
+	border-radius: 5px;
+	font-weight: bold;
+	color: #535e66;
+}
+
+.xcConfirm .popBox .ttBox {
+	height: 30px;
+	line-height: 30px;
+	padding: 14px 30px;
+	border-bottom: solid 1px #eef0f1;
+}
+
+.xcConfirm .popBox .ttBox .tt {
+	font-size: 18px;
+	display: block;
+	float: left;
+	height: 30px;
+	position: relative;
+}
+
+.xcConfirm .popBox .ttBox .clsBtn {
+	display: block;
+	cursor: pointer;
+	width: 12px;
+	height: 12px;
+	position: absolute;
+	top: 22px;
+	right: 30px;
+	background: url(../../img/icons.png) -48px -96px no-repeat;
+}
+
+.xcConfirm .popBox .txtBox {
+	margin: 40px 100px;
+	height: 100px;
+	overflow: hidden;
+}
+
+.xcConfirm .popBox .txtBox .bigIcon {
+	float: left;
+	margin-right: 20px;
+	width: 48px;
+	height: 48px;
+	background-image: url(../../img/icons.png);
+	background-repeat: no-repeat;
+	background-position: 48px 0;
+}
+
+.xcConfirm .popBox .txtBox p {
+	height: 84px;
+	margin-top: 16px;
+	line-height: 26px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.xcConfirm .popBox .txtBox p input {
+	width: 364px;
+	height: 30px;
+	border: solid 1px #eef0f1;
+	font-size: 18px;
+	margin-top: 6px;
+}
+
+.xcConfirm .popBox .btnArea {
+	border-top: solid 1px #eef0f1;
+}
+
+.xcConfirm .popBox .btnGroup {
+	float: right;
+}
+
+.xcConfirm .popBox .btnGroup .sgBtn {
+	margin-top: 14px;
+	margin-right: 10px;
+}
+
+.xcConfirm .popBox .sgBtn {
+	display: block;
+	cursor: pointer;
+	float: left;
+	width: 95px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	color: #FFFFFF;
+	border-radius: 5px;
+}
+
+.xcConfirm .popBox .sgBtn.ok {
+	background-color: #0095d9;
+	color: #FFFFFF;
+}
+
+.xcConfirm .popBox .sgBtn.cancel {
+	background-color: #546a79;
+	color: #FFFFFF;
+}
+/*
+*优惠信息样式
+*/
+.textbox {
+	position: relative;
+	border: 1px solid #FFC0CB;
+	background-color: #fff;
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	margin: 0;
+	padding: 0;
+	border-radius: 8px 8px 8px 8px;
+	text-align: center;
+}
+
+.textbox-focused {
+	border: 1px solid #eb8484;
+	box-shadow: 0 0 3px 0 #eb8484;
+}
+
+.button {
+	display: inline-block;
+	text-decoration: none;
+	font: 12px/12px HelveticaNeue, Arial;
+	padding: 5px 18px;
+	color: #555;
+	border: 1px solid #dedede;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.button.blue {
+	color: #fef4e9;
+	border: solid 1px #F08080;
+	background: #F08080;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F08080',
+		endColorstr='#F08080' );
+}
+
+.button.blue:hover {
+	bacRkground: #fef4e9;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F08080',
+		endColorstr='#F08080' ); /*  IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#F08080),
+		to(#F08080) ); /*  WebKit */
+	background: -moz-linear-gradient(top, #F08080, #F08080);
+	border-color: #c7c7c7 #c3c3c3 #bebebe;
+	text-shadow: 0 1px 0 #fdfdfd;
+	box-shadow: 0 1px 1px #ebebeb, inset 0 1px 0 #F08080;
+}
+
+.groupdiv {
+	font-family: 微软雅黑;
+	font-size: 13px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 650px;
+}
+
+.grouptable {
+	font-size: 13px;
+	width: 100%;
+	line-height: 25px;
+}
+
+select {
+	width: 100px;
+}
+
+#hidediv {
+	float: left;
+	display: none;
+	margin-left: 40px;
+}
+.groupdiv1 {
+	float: left;
+	margin-left: 45px;
+	margin-top: -7px;
+}
+
+.groupdiv2 {
+	float: left;
+	margin-left: 200px;
+	margin-top: 20px;
+}
+
+.groupdiv3 {
+	float: left;
+	margin-left: 10px;
+	margin-top: 20px;
+}
+
+.groupdiv4 {
+	float: left;
+	margin-left: 40px;
+}
+
+.groupbutton {
+	margin-left: 25px;
+	margin-top: 30px;
+}
+
+.groupbutton2 {
+	margin-left: 290px;
+	margin-top: 30px;
+}
+
+.groupproduct {
+	width: 36%;
+	margin-top: 20px;
+	min-height: 300px;
+	background-color: #E6E6FA;
+	float: left;
+	margin-left: 10px;
+	border-radius: 10px
+}
+
+.groupproduct2{
+	width: 48%;
+	margin-top: 20px;
+	min-height: 300px;
+	background-color: #E6E6FA;
+	float: left;
+	margin-left: 13px;
+	border-radius: 10px;
+}
+
+.groupproductdiv {
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 13px;
+	font-family: 微软雅黑;
+	width: 270px;
+	margin-top: 10px;
+}
+
+.groupproductdiv3 {
+	margin-left: 20px;
+	font-size: 13px;
+	font-family: 微软雅黑;
+	width: 270px;
+	margin-top: 10px;
+}
+
+.groupproduct h4 {
+	margin-left: 70px;
+	padding-top: 10px;
+}
+
+.groupproduct h4 span {
+	color: red;
+}
+
+.groupproduct img {
+	width: 270px;
+	height: 200px;
+	border: 0;
+}
+
+.groupproduct  p span {
+	font-weight: bolder;
+	color: red;
+}
+
+.groupproduct2 h4 {
+	margin-left: 70px;
+	padding-top: 10px;
+}
+
+.groupproduct2 h4 span {
+	color: red;
+}
+
+.groupproduct2 img {
+	width: 270px;
+	height: 200px;
+	border: 0;
+}
+
+.groupproduct2  p span {
+	font-weight: bolder;
+	color: red;
+}
+
+.groupproductdiv2 {
+	margin-left: 90px;
+}
+
+/*
+*特定用户消息
+*/
+.specialdiv {
+	margin-left: auto;
+	margin-right: auto;
+	width: 73%;
+	margin-top: 40px;
+}
+
+
+.specialtable {
+	font-family: 微软雅黑;
+	font-size: 13px;
+	margin-left: 200px;
+	line-height: 30px;
+}
+
+.specialtable tr {
+	height: 30px;
+}
+
+.specialtable tr td:nth-child(1) {
+	text-align: right;
+}
+
+.panel-header,.panel-body {
+	border-color: #d8d8d8;
+}
+
+.panel-title {
+	font-size: 13px;
+	font-weight: bold;
+	color: #39ADB4;
+	height: 16px;
+	line-height: 16px;
+	font-family: 微软雅黑;
+}
+
+.datagrid-row-selected {
+	background: #d8d8d8;
+	color: #000000;
+}
+
+#dg {
+	min-height: 250px;
+	width: 70%;
+	overflow: hidden;
+}
+
+/*
+*设置还款通知样式
+*/
+.repaynoticetable {
+	width: 100%;
+	font-size: 13px;
+	font-family: 微软雅黑;
+	line-height: 30px;
+}
+
+.repaynoticetable tr td:nth-child(1) {
+	text-align: right;
+}
+
+.repaynoticetable tr td:nth-child(3) {
+	text-align: right;
+}
+
+.repaynoticediv {
+	margin-left: 280px;
+	margin-top: 10px;
+}
+
+.repaynoticediv1 {
+	margin-left: 220px;
+}
+
+.file-box {
+	position: relative;
+	width: 340px;
+	margin-left: 140px;
+}
+
+.txt {
+	height: 25px;
+	border: 1px solid #d8d8d8;
+	width: 180px;
+	margin-right: 5px;
+	margin-bottom: 1px;
+}
+
+.file {
+	position: absolute;
+	top: 2px;
+	right:105px;
+	height: 24px;
+	margin-left: 20px;
+	filter: alpha(opacity : 0);
+	opacity: 0;
+	width: 260px
+}
+
+.btn {
+	position: absolute;
+	left: 368px;
+}
+
+/*
+*在线申请样式
+*/
+.applytable {
+	font-family: 微软雅黑;
+	font-size: 13px;
+	width: 80%;
+}
+
+#fromTime {
+	width: 180px;
+}
+
+#toTime {
+	width: 180px;
+}
+
+a {
+	text-decoration: none;
+	color: blue;
+}
+
+/*
+*数据统计页面样式
+*/
+.datacountdiv {
+	font-family: 微软雅黑;
+	font-size: 13px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	overflow: hidden;
+}
+
+.datacountdiv1 {
+	float: left;
+	margin-left: 60px;
+}
+
+.datacountdiv2 {
+	float: left;
+	margin-left: 150px;
+}
+
+.datacountdiv3 {
+	clear: both;
+	top: 30px;
+	position: relative;
+	left: 100px;
+}
+
+.datacountdiv4 {
+	position: relative;
+	top: 60px;
+	left: 240px;
+}
+
+#city {
+	width: 150px;
+}
+
+#type {
+	width: 150px;
+}
+
+#main {
+	height: 400px;
+	margin-top: 80px;
+}
+
+/*
+*申请详情页面样式
+*/
+.applyinfodiv {
+	margin-left: auto;
+	margin-right: auto;
+	width: 600px;
+	min-height: 700px;
+}
+
+.applyinfotable {
+	font-family: 微软雅黑;
+	font-size: 13px;
+	width: 400px;
+}
+
+.applyinfotable tr td:nth-child(1) {
+	text-align: right;
+}
+
+.applyinfotable2 {
+	font-family: 微软雅黑;
+	font-size: 13px;
+	margin-left: 60px;
+	width: 400px;
+}
+
+.applyinfotable2 tr td {
+	text-align: center;
+}
+
+/*
+*还款方式样式
+*/
+.paymethodtable {
+	font-family: 微软雅黑;
+	font-size: 13px;
+	margin-left: 60px;
+	margin-bottom: 15px;
+	line-height: 35px;
+}
+
+/*
+*修改还款方式样式
+*/
+.c {
+	margin-left: 10px;
+}
+
+#payment_form table {
+	font-family: 微软雅黑;
+	font-size: 13px;
+	width: 100%;
+}
+
+#payment_form table tr {
+	height: 30px;
+}
+
+#payment_form table tr td:nth-child(1) {
+	text-align: right;
+}
+
+.paymodifyimg {
+	width: 100px;
+	height: 100px;
+}
+
+.paymodifydiv1 {
+	margin-left: 280px;
+	margin-top: 20px;
+}
+
+.paymodifydiv2 {
+	width: 500px;
+}
+
+/*
+*新增关键字样式
+*/
+.addkeyworddiv {
+	margin-left: 180px;
+	margin-right: auto;
+	width: 500px;
+	min-height: 300px;
+}
+
+.addkeywordtable {
+	width: 100%;
+	line-height: 30px;
+	font-family: 微软雅黑;
+	font-size: 13px;
+}
+
+.addkeywordtable tr td:nth-child(1) {
+	text-align: right;
+}
+
+.addkeyworddiv2 {
+	margin-left: 130px;
+	margin-top: 20px;
+}
+/*
+*查找关键字样式
+*/
+#searchTable1 {
+	line-height: 30px;
+	font-family: 微软雅黑;
+	font-size: 100px;
+	margin-left: 100px;
+	margin-right: auto;
+}
+
+#searchTable1  tr td:nth-child(1) {
+	text-align: right;
+}
+
+/*
+*修改关键字样式
+*/
+.modifyworddiv {
+	margin-left: 180px;
+	margin-right: auto;
+	width: 500px;
+	min-height: 300px;
+}
+
+.modifywordtable {
+	font-family: 微软雅黑;
+	font-size: 13px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	line-height: 30px;
+}
+
+.modifywordtable tr td:nth-child(1) {
+	text-align: right;
+}
+
+/*
+*查询二维码样式
+*/
+.qrcodeinfodiv {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	height: 500px font-family:微软雅黑;
+	font-size: 13px;
+}
+
+.qrcodeinfodiv1 {
+	float: left;
+	margin-left: 240px;
+	margin-top: 10px;
+}
+
+.qrcodeinfodiv2 {
+	float: left;
+	margin-left: 10px;
+	margin-top: 8px;
+}
+
+.qrcodeinfodiv3 {
+	margin-top: 40px;
+}
+
+/*
+*生成二维码样式
+*/
+.newqrcodediv {
+	font-family: 微软雅黑;
+	font-size: 13px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 650px;
+}
+
+.newqrcodediv1 {
+	float: left;
+	margin-top: 20px;
+	margin-left: 180px;
+}
+
+.newqrcodediv2 {
+	float: left;
+	margin-left: 10px;
+	margin-top: 18px;
+}
+
+.newqrcodediv3 {
+	position: relative;
+	left: 115px;
+	top: 20px;
+	clear: both;
+	display: none;
+}
+
+.newqrcodediv4{
+	position: relative;
+	left: 135px;
+	top: 20px;
+	clear: both;
+}
+
+.newqrcodeimg {
+	width: 400px;
+	height: 400px;
+}
+
+/*
+*查询参数类型样式
+*/
+#searchTable1 {
+	font-family: 微软雅黑;
+	font-size: 13px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*
+*新增参数类型样式
+*/
+.addparamdiv {
+	margin-left: 120px;
+	margin-right: auto;
+	width: 500px;
+	min-height: 300px;
+	margin-top: 20px;
+}
+
+.addparamtable {
+	width: 100%;
+	line-height: 30px;
+	font-family: 微软雅黑;
+	font-size: 13px;
+}
+
+.addparamtable tr td:nth-child(1) {
+	text-align: right;
+}
+
+/*
+*新增参数类型值样式
+*/
+.addparamvaluediv {
+	margin-left: 120px;
+	margin-right: auto;
+	width: 500px;
+	min-height: 300px;
+}
+
+.addparamvaluetable {
+	font-family: 微软雅黑;
+	font-size: 13px;
+	width: 100%;
+	line-height: 30px;
+}
+
+.addparamvaluetable tr td:nth-child(1) {
+	text-align: right;
+}
+
+/*
+*修改参数类型样式
+*/
+.modifyparamtypediv {
+	margin-top: 20px;
+	margin-left: 120px;
+	margin-right: auto;
+	width: 500px;
+	min-height: 300px;
+}
+
+.modifytypetable {
+	font-family: 微软雅黑;
+	font-size: 13px;
+	width: 100%;
+	line-height: 30px;
+}
+
+.modifytypetable tr td:nth-child(1) {
+	text-align: right;
+}
+
+/*
+*修改参数类型值样式
+*/
+.modifyparamvaluediv {
+	margin-left: 10px;
+	margin-right: auto;
+	width: 500px;
+	min-height: 300px;
+}
+
+.modifyparamvaluetable {
+	font-family: 微软雅黑;
+	font-size: 13px;
+	width: 50%;
+	line-height: 30px;
+}
+
+.modifyparamvaluetable tr td:nth-child(1) {
+	text-align: right;
+}
+
+/*
+*查询菜单样式
+*/
+.searchmenudiv {
+	font-family: 微软雅黑;
+	font-size: 13px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+	margin-top: 30px;
+}
+/*
+*修改微信菜单样式
+*/
+.modifymenudiv {
+	margin-left: 120px;
+	margin-right: auto;
+	width: 500px;
+	min-height: 300px;
+}
+
+.modifymenutable {
+	font-family: 微软雅黑;
+	font-size: 13px;
+	width: 100%;
+	line-height: 30px;
+}
+
+.modifymenutable tr td:nth-child(1) {
+	text-align: right;
+}
+
+.modifymenudiv1 {
+	margin-left: 150px;
+	margin-top: 15px;
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<layout>
+	<title>微信后台菜单</title>
+	<trees>
+		<tree id="1" name="信息发布维护">
+		    <folder id="1.1" name="信息管理（图文）">
+		       <leaf id="1.1.1" name="信息管理" url="./manage/product/show.do" />
+			   <leaf id="1.1.2" name="新增信息" url="./manage/product/insert.do" />
+			   </folder>
+			  <!-- <folder id="1.2" name="优惠信息" url="./manage/preinfo/group/show.do" >-->
+			 <folder id="1.2" name="优惠信息" url="./manage/preinfo/group/show.do">		
+			</folder>   
+		</tree>
+		<tree id="2" name="在线申请管理">
+		    <folder id="2.1" name="申请管理"  url="./manage/apply/toSearch.do"></folder>
+			   <folder id="2.2" name="设置还款通知"  url="./manage/repayNotice.do"></folder>   
+		</tree>
+		<tree id="3" name="客户管理">
+			   <folder id="3.1" name="分组管理"  url="./manage/groupManagerController/searchGroup.do"></folder> 
+			   <folder id="3.2" name="客户群分组"  url="./manage/customer/show.do" ></folder>
+		</tree>
+		<tree id="4" name="还款方式">
+		    <folder id="4.1" name="还款方式管理"  url="./manage/paymentMethodController/toGet.do"></folder>
+			   <folder id="4.2" name="新建还款方式"  url="./manage/paymentMethodController/insert.do"></folder>   
+		</tree>
+		<tree id="5" name="自动回复">
+		    <folder id="5.1" name="新增关键字"  url="./manage/keyWordsController/addKeyWokds.do"></folder>
+			   <folder id="5.2" name="关键字管理"  url="./manage/keyWordsController/searchKeyWords.do"></folder>   
+		</tree>
+		<tree id="6" name="二维码管理">
+		    <folder id="6.1" name="二维码管理"  url="./manage/QrCodeController/toGet.do"></folder>
+			   <folder id="6.2" name="生成二维码"  url="./manage/QrCodeController/toInsert.do"></folder>   
+		</tree>
+		<tree id="7" name="参数管理">
+		    <folder id="7.1" name="参数类型管理"  url="./manage/ParamTypeController/search_param_type.do"></folder>
+			   <folder id="7.2" name="新增参数类型"  url="./manage/ParamTypeController/add_param_type.do"></folder>
+			   <folder id="7.3" name="参数类型值管理"  url="./manage/ParamTypeValueController/search_param_type_value.do"></folder>
+			   <folder id="7.4" name="新增参数类型值"  url="./manage/ParamTypeValueController/add_param_type_value.do"></folder>
+			   <folder id="7.5" name="欢迎语管理"  url="./manage/remind.do"></folder>    
+		</tree>
+		<tree id="8" name="微信菜单管理">
+		    <folder id="8.1" name="菜单管理"  url="./manage/wxMenuConroller/searchMenu.do"></folder>
+		</tree>
+		<tree id="9" name="数据统计">
+		    <folder id="9.1" name="数据基本统计"  url="./manage/dataRecord/basic.do"></folder>
+		    <folder id="9.2" name="数据详细统计"  url="./manage/dataRecord/detail.do"></folder>
+		</tree>
+		<tree id="10" name="系统管理">
+		    <folder id="10.1" name="用户">
+		       <leaf id="10.1.1" name="用户注册" url="powerManage/Register.jsp" />
+			   <leaf id="10.1.2" name="用户管理" url="powerManage/Usermanage.jsp" />
+			   <leaf id="10.1.3" name="修改密码" url="powerManage/ModifyPwd.jsp" />
+			   <leaf id="10.1.4"  name="角色管理" url="powerManage/Rolemanage.jsp" />
+			</folder>   
+		</tree>
+	</trees>
+</layout>

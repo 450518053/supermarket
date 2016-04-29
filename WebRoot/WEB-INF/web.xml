@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+	<display-name></display-name>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+
+	<servlet>
+		<description>登陆servlet</description>
+		<servlet-name>userlogin</servlet-name>
+		<servlet-class>com.servlet.UserLoginServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>userlogin</servlet-name>
+		<url-pattern>/user/login</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description>校验userid</description>
+		<servlet-name>verifyId</servlet-name>
+		<servlet-class>com.servlet.UserIdVerifyServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>verifyId</servlet-name>
+		<url-pattern>/user/verify</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description>注册用户</description>
+		<servlet-name>registerUser</servlet-name>
+		<servlet-class>com.servlet.UserRegisterServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>registerUser</servlet-name>
+		<url-pattern>/user/register</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description>获取用户列表</description>
+		<servlet-name>userList</servlet-name>
+		<servlet-class>com.servlet.UserShowServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>userList</servlet-name>
+		<url-pattern>/user/show</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description>通过id查询用户</description>
+		<servlet-name>queryUserByID</servlet-name>
+		<servlet-class>com.servlet.UserSelectByIdServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>queryUserByID</servlet-name>
+		<url-pattern>/user/query</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description>修改用户</description>
+		<servlet-name>updateUser</servlet-name>
+		<servlet-class>com.servlet.UserUpdateServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>updateUser</servlet-name>
+		<url-pattern>/user/update</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description>重置密码</description>
+		<servlet-name>resetPWD</servlet-name>
+		<servlet-class>com.servlet.UserPasswordResetServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>resetPWD</servlet-name>
+		<url-pattern>/user/reset</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description>用户状态更改</description>
+		<servlet-name>userStateUpdate</servlet-name>
+		<servlet-class>com.servlet.UserActivetyServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>userStateUpdate</servlet-name>
+		<url-pattern>/user/state</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description>获取用户-角色信息</description>
+		<servlet-name>getUserRole</servlet-name>
+		<servlet-class>com.servlet.UserGetRoleServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>getUserRole</servlet-name>
+		<url-pattern>/user/userRole</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description>修改用户-角色信息</description>
+		<servlet-name>updateUserRole</servlet-name>
+		<servlet-class>com.servlet.UpdateUserRoleServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>updateUserRole</servlet-name>
+		<url-pattern>/user/updateUserRole</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description>修改密码</description>
+		<servlet-name>updatePWD</servlet-name>
+		<servlet-class>com.servlet.UpdatePasswordServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>updatePWD</servlet-name>
+		<url-pattern>/user/updatePWD</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<description>获取角色列表</description>
+		<servlet-name>getRole</servlet-name>
+		<servlet-class>com.servlet.RoleShowServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>getRole</servlet-name>
+		<url-pattern>/role/show</url-pattern>
+	</servlet-mapping>
+
+
+</web-app>

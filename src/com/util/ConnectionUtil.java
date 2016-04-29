@@ -20,7 +20,7 @@ public class ConnectionUtil {
             //载入MySQL的JDBC驱动类
             Class.forName("com.mysql.jdbc.Driver");
             //获得数据库连接
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/market?user=root&password=123456");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://114.55.87.106/supermarket?user=root&password=123456");
             
             return conn;
         }

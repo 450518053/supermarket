@@ -11,9 +11,9 @@ public class SellOrder {
 
 	private int orderNo;
 
-	private int quantity;
+	private int quantity;//购买商品的数量
 
-	private double totalPrice;
+	private double totalPrice;//总价
 
 	private Date createTime;
 

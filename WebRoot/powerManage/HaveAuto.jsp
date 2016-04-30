@@ -23,7 +23,7 @@
     			delautoid=delautoid.substring(0, delautoid.length-1);
     		}
     		$.ajax({
-				 url:'<%=basePath%>'+'manage/role/udpateRoleAuto.do?role_id='+'<%=role_id%>'+'&autoid='+autoid+'&delautoid='+delautoid,
+				 url:'<%=basePath%>'+'role/updaterolepe?role_id='+'<%=role_id%>'+'&autoid='+autoid+'&delautoid='+delautoid,
 				 type : "POST",
 				 success : function(data) {
 					  if(data){

@@ -19,8 +19,6 @@ import com.pojo.UUserLogin;
 /**   
  * @ClassName: UserRegisterServlet  
  * @Description:  用户注册 
- * @author: marx.liao
- * @date 2016-4-28 下午5:17:50  
  *     
  */
 public class UserRegisterServlet extends HttpServlet{

@@ -7,7 +7,6 @@ import java.util.List;
  *
  * @Description 
  *
- * @author frank.tan 2015-9-2
  *
  */
 public class JSONResult {

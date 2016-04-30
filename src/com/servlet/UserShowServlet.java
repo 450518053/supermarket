@@ -17,8 +17,6 @@ import com.pojo.UUserLogin;
 /**   
  * @ClassName: UserShowServlet  
  * @Description:   显示用户列表
- * @author: marx.liao
- * @date 2016-4-29 上午10:06:44  
  *     
  */
 public class UserShowServlet extends HttpServlet{

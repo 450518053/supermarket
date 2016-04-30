@@ -18,8 +18,6 @@ import com.pojo.UUserLogin;
 /**   
  * @ClassName: UpdatePasswordServlet  
  * @Description:   修改密码
- * @author: marx.liao
- * @date 2016-4-29 下午3:59:17  
  *     
  */
 public class UpdatePasswordServlet extends HttpServlet{

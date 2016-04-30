@@ -7,8 +7,6 @@ import java.sql.DriverManager;
 /**   
  * @ClassName: ConnectionUtil  
  * @Description:   数据库连接工具类
- * @author: marx.liao
- * @date 2016-4-28 上午10:18:44  
  *     
  */
 public class ConnectionUtil {
@@ -20,7 +18,7 @@ public class ConnectionUtil {
             //载入MySQL的JDBC驱动类
             Class.forName("com.mysql.jdbc.Driver");
             //获得数据库连接
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/market?user=root&password=123456");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://114.55.87.106/supermarket?user=root&password=123456");
             
             return conn;
         }

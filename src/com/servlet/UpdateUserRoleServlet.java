@@ -15,9 +15,7 @@ import com.pojo.UUserRole;
 
 /**   
  * @ClassName: UpdateUserRole  
- * @Description:   
- * @author: marx.liao
- * @date 2016-4-29 下午3:19:47  
+ * @Description:   修改用户-角色信息
  *     
  */
 public class UpdateUserRoleServlet extends HttpServlet{

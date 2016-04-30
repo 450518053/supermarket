@@ -8,8 +8,6 @@ import javax.servlet.http.HttpServletRequest;
 /**   
  * @ClassName: CommonUtil  
  * @Description:   通用工具类
- * @author: marx.liao
- * @date 2016-4-28 上午11:30:22  
  *     
  */
 public class CommonUtil {

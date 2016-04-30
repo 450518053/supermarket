@@ -23,7 +23,7 @@
     			deluserid=deluserid.substring(0, deluserid.length-1);
     		}
     		$.ajax({
-				 url:'<%=basePath%>'+'manage/role/AllocaRole.do?role_id='+'<%=role_id%>'+'&userid='+userid+'&deluserid='+deluserid,
+				 url:'<%=basePath%>'+'role/updateroleuser?role_id='+'<%=role_id%>'+'&userid='+userid+'&deluserid='+deluserid,
 				 type : "POST",
 				 success : function(data) {
 					  if(data){

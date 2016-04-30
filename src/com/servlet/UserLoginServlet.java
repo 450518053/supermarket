@@ -21,8 +21,6 @@ import com.util.CommonUtil;
 /**   
  * @ClassName: UserLoginServlet  
  * @Description:   
- * @author: marx.liao
- * @date 2016-4-28 上午10:40:20  
  *     
  */
 public class UserLoginServlet extends HttpServlet{

@@ -13,8 +13,6 @@ import com.dao.UserMangerDao;
 /**   
  * @ClassName: UserActivetyServlet  
  * @Description:   用户启用注销
- * @author: marx.liao
- * @date 2016-4-29 下午2:32:23  
  *     
  */
 public class UserActivetyServlet extends HttpServlet{

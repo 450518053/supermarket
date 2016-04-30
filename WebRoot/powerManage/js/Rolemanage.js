@@ -82,11 +82,11 @@ function sure_but(){
 		success:function(){
 			$.ajax({
 			type : "POST",
-			url : basepath+'manage/role/addRole.do',
+			url : basepath+'role/add',
 			data : $('#insertForm').serialize(),
 			success : function(data) {
 				if (data) {
-					if(data=="error"){
+					if(data.trim()=="error"){
 						alert("角色代码重复，请重新填写！");
 						
 					}
@@ -135,7 +135,7 @@ function upd_sure_but(){
 		success:function(){
 			$.ajax({
 			type : "POST",
-			url : basepath+'manage/role/modifyRole.do',
+			url : basepath+'role/update',
 			data : $('#updateForm').serialize(),
 			success : function(data) {
 				if (data) {
@@ -171,11 +171,11 @@ function activateRole(){
 		$.messager.confirm('温馨提示', '你确定要启用该角色吗?', function (r) {  
 	        if(r){
 	        	$.ajax({
-					 url:basepath+'manage/role/activateRole.do?state=1',
+					 url:basepath+'role/activate?state=1',
 					 type : "POST",
 					 data : {role_id:rows[0].roleId},
 					 success : function(data) {
-						 if(data=='success'){
+						 if(data.trim()=='success'){
 							alert("操作成功!"); 
 							 $('#query_data').datagrid('reload');
 						 }else{
@@ -207,11 +207,11 @@ function logOutRole(){
 		$.messager.confirm('温馨提示', '你确定要注销该角色吗?', function (r) {  
 	        if(r){
 	        	$.ajax({
-					 url:basepath+'manage/role/logOutRole.do?state=0&userid='+userid,
+					 url:basepath+'role/logout?state=0&userid='+userid,
 					 type : "POST",
 					 data : {role_id:rows[0].roleId},
 					 success : function(data) {
-						 if(data=='success'){
+						 if(data.trim()=='success'){
 							 alert("操作成功!"); 
 							 $('#query_data').datagrid('reload');
 						 }else{
@@ -243,7 +243,7 @@ function assignUser(){
 		}
 		add_dialog();
 		$('#add_dialog').dialog('setTitle', '{当前角色ID：'+rows[0].roleId+'}');
-		$('#add_dialog').dialog('refresh', basepath+'manage/role/userRole.do?role_id='+rows[0].roleId);
+		$('#add_dialog').dialog('refresh', basepath+'role/roleuser?role_id='+rows[0].roleId);
         $('#add_dialog').dialog('open');
 	}
 }
@@ -277,7 +277,7 @@ function assignPermission(){
 		}
 		update_userAuto();
 		$('#update_userAuto').dialog('setTitle', '{当前角色ID：'+rows[0].roleId+'}');
-		$('#update_userAuto').dialog('refresh', basepath+'manage/role/getUserAuto.do?role_id='+rows[0].roleId);
+		$('#update_userAuto').dialog('refresh', basepath+'role/rolepe?role_id='+rows[0].roleId);
         $('#update_userAuto').dialog('open');
 	}
 }

@@ -17,8 +17,6 @@ import com.util.ConnectionUtil;
 /**   
  * @ClassName: UserMangerDao  
  * @Description:  用户管理Dao 
- * @author: marx.liao
- * @date 2016-4-28 上午10:38:55  
  *     
  */
 public class UserMangerDao {

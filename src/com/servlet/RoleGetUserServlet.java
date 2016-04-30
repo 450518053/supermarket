@@ -9,21 +9,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.dao.UserMangerDao;
-import com.pojo.UUserLogin;
+import com.dao.RoleManagerDao;
 import com.pojo.UUserRole;
 
-/**   
- * @ClassName: UserGetRoleServlet  
- * @Description:   获取用户-角色信息
- *     
- */
-public class UserGetRoleServlet extends HttpServlet{
-	
+public class RoleGetUserServlet extends HttpServlet{
+
 	/**
-	 * 
+	 * 获取角色-用户信息
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -7333274790753848940L;
 	
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
@@ -34,11 +28,11 @@ public class UserGetRoleServlet extends HttpServlet{
 			throws ServletException, IOException {
 		List<UUserRole> haveRolelist = new ArrayList<UUserRole>();
 		List<UUserRole> lackRolelist = new ArrayList<UUserRole>();
-		haveRolelist = new UserMangerDao().haveRolelist(req.getParameter("user_id"));
-		lackRolelist = new UserMangerDao().lackRolelist(req.getParameter("user_id"));
-		req.getSession().setAttribute("haveRoleMap", haveRolelist);
-		req.getSession().setAttribute("lackRoleMap", lackRolelist);
-		req.getRequestDispatcher("../powerManage/HaveUser.jsp").forward(req,resp);
+		haveRolelist = new RoleManagerDao().haveRole(req.getParameter("role_id"));
+		lackRolelist = new RoleManagerDao().lackRole(req.getParameter("role_id"));
+		req.getSession().setAttribute("haveMap", haveRolelist);
+		req.getSession().setAttribute("lackMap", lackRolelist);
+		req.getRequestDispatcher("../powerManage/Haverole.jsp").forward(req,resp);
 	}
 
 }

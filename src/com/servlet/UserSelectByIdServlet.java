@@ -14,8 +14,6 @@ import com.pojo.UUserLogin;
 /**   
  * @ClassName: UserSelectByIdServlet  
  * @Description:   通过id查询用户
- * @author: marx.liao
- * @date 2016-4-29 下午12:59:31  
  *     
  */
 public class UserSelectByIdServlet extends HttpServlet{

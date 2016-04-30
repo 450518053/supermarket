@@ -16,8 +16,6 @@ import com.json.pojo.JsonData;
 /**   
  * @ClassName: RoleShowServlet  
  * @Description:   显示角色列表
- * @author: marx.liao
- * @date 2016-4-29 下午4:27:15  
  *     
  */
 public class RoleShowServlet extends HttpServlet{
@@ -36,8 +34,8 @@ public class RoleShowServlet extends HttpServlet{
 			throws ServletException, IOException {
 		resp.setCharacterEncoding("UTF-8");  //设置字符集
 		PrintWriter out = resp.getWriter();
-		String role_id = req.getParameter("user_id");
-		String role_name = req.getParameter("user_name");
+		String role_id = req.getParameter("role_id");
+		String role_name = req.getParameter("role_name");
 		int rows = Integer.parseInt(req.getParameter("rows"));
 		int page = Integer.parseInt(req.getParameter("page"));
 //		String previous = req.getParameter("previous");

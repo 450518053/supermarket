@@ -15,8 +15,6 @@ import com.json.pojo.Json;
 /**   
  * @ClassName: UserIdVerify  
  * @Description:  userId校验 
- * @author: marx.liao
- * @date 2016-4-28 下午5:47:10  
  *     
  */
 public class UserIdVerifyServlet extends HttpServlet{

@@ -18,8 +18,6 @@ import com.pojo.UUserLogin;
 /**   
  * @ClassName: UserPasswordReset  
  * @Description:  重置密码 
- * @author: marx.liao
- * @date 2016-4-29 下午2:13:35  
  *     
  */
 public class UserPasswordResetServlet extends HttpServlet{

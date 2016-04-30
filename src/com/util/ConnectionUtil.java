@@ -7,8 +7,6 @@ import java.sql.DriverManager;
 /**   
  * @ClassName: ConnectionUtil  
  * @Description:   数据库连接工具类
- * @author: marx.liao
- * @date 2016-4-28 上午10:18:44  
  *     
  */
 public class ConnectionUtil {

@@ -140,6 +140,94 @@
 		<servlet-name>getRole</servlet-name>
 		<url-pattern>/role/show</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<description>添加角色</description>
+		<servlet-name>addRole</servlet-name>
+		<servlet-class>com.servlet.AddRoleServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>addRole</servlet-name>
+		<url-pattern>/role/add</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<description>修改角色</description>
+		<servlet-name>updateRole</servlet-name>
+		<servlet-class>com.servlet.UpdateRoleServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>updateRole</servlet-name>
+		<url-pattern>/role/update</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<description>注销角色</description>
+		<servlet-name>logOutRole</servlet-name>
+		<servlet-class>com.servlet.LogOutRoleServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>logOutRole</servlet-name>
+		<url-pattern>/role/logout</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<description>启用角色</description>
+		<servlet-name>activateRole</servlet-name>
+		<servlet-class>com.servlet.ActivateRoleServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>activateRole</servlet-name>
+		<url-pattern>/role/activate</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<description>获取角色-权限信息</description>
+		<servlet-name>getRolePermission</servlet-name>
+		<servlet-class>com.servlet.RoleGetPermissionsServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>getRolePermission</servlet-name>
+		<url-pattern>/role/rolepe</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<description>修改角色-权限信息</description>
+		<servlet-name>updateRolePermission</servlet-name>
+		<servlet-class>com.servlet.UpdateRolePermissionServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>updateRolePermission</servlet-name>
+		<url-pattern>/role/updaterolepe</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<description>获取角色-用户信息</description>
+		<servlet-name>getRoleUser</servlet-name>
+		<servlet-class>com.servlet.RoleGetUserServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>getRoleUser</servlet-name>
+		<url-pattern>/role/roleuser</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<description>修改角色-用户信息</description>
+		<servlet-name>updateRoleUser</servlet-name>
+		<servlet-class>com.servlet.UpdateRoleUserServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>updateRoleUser</servlet-name>
+		<url-pattern>/role/updateroleuser</url-pattern>
+	</servlet-mapping>
 
 
 </web-app>

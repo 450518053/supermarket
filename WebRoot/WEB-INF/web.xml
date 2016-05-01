@@ -228,6 +228,17 @@
 		<servlet-name>updateRoleUser</servlet-name>
 		<url-pattern>/role/updateroleuser</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<description>数据分析</description>
+		<servlet-name>DataAnalysis</servlet-name>
+		<servlet-class>com.servlet.DataAnalysisServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DataAnalysis</servlet-name>
+		<url-pattern>/data/analysis</url-pattern>
+	</servlet-mapping>
 
 
 </web-app>

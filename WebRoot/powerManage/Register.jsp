@@ -126,7 +126,7 @@
 </script>
 </head>
 <body>
-	<div style="width:75%">
+	<div style="width:75%;position:relative; left:15%;margin-top:150px;">
 		<form id="registForm">
 			<table cellspacing="10px" align="center"
 				style="font-size: 13px;font-family: 微软雅黑;">

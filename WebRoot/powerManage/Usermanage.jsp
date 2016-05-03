@@ -73,7 +73,7 @@ table td{
 		</div>
 	</div>
 
-	<div id="show_data" style="width:75%"></div>
+	<div id="show_data" style="width:75%;padding-bottom: 20px;"></div>
 
 	<div id="add_dialog" ></div>
 

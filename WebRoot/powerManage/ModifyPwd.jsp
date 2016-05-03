@@ -44,7 +44,7 @@
 	}
 </script>
 
-<div class="easyui-panel" width="72%">
+<div class="easyui-panel" width="72%" style="position:relative; left:20%;margin-top:150px;">
 	<form id="userForm">
 		<table cellspacing="10px" align="center"
 			style="font-size: 13px;font-family: 微软雅黑;width:50%">

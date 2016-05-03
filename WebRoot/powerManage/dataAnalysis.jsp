@@ -61,7 +61,7 @@ table td{
 <body>
 	<div style="width: 75%;padding-bottom: 20px; position:relative; left:20%; margin-top:100px">
 		<form id="queryForm">
-			 <table style="margin-left: 100px;margin-top: 20px;font-size: 13px;font-family: 微软雅黑;">
+			 <table style="margin-left: 5%;margin-top: 20px;font-size: 13px;font-family: 微软雅黑;">
 				<tr>
 					<td>开始日期：<input id="start_time" name="start_time" class="Wdate" type="text" onFocus="WdatePicker({maxDate: '#F{$dp.$D(\'end_time\')||\'2020-10-01\'}' })"/> 
 					</td>
@@ -71,14 +71,14 @@ table td{
 			</table>
 		</form>
 		&nbsp;
-		<div style="margin-left: 290px;">
+		<div style="margin-left: 25%;">
 			<a href="#" onclick="query();" class="button blue"
 				>提交</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
 				href="#" onclick="resetForm();" class="button blue">重置</a>
 		</div>
 	</div>
 
-	<div id="show_data" style="width:100%;position:relative; left:20%;">
+	<div id="show_data" style="width:100%;position:relative; left:25%;">
 		客户行为分析：<input class="easyui-textbox"  id="message" name="message" data-options="multiline:true" style="height:200px;width:30%"></input>
 	</div>
 

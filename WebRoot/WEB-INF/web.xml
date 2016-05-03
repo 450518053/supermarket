@@ -239,6 +239,17 @@
 		<servlet-name>DataAnalysis</servlet-name>
 		<url-pattern>/data/analysis</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<description>转发到销售页面</description>
+		<servlet-name>ToSealJsp</servlet-name>
+		<servlet-class>com.servlet.ToSealJspServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ToSealJsp</servlet-name>
+		<url-pattern>/seal/jsp</url-pattern>
+	</servlet-mapping>
 
 
 </web-app>

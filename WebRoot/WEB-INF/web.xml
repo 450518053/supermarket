@@ -250,6 +250,17 @@
 		<servlet-name>ToSealJsp</servlet-name>
 		<url-pattern>/seal/jsp</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<description>数据分析</description>
+		<servlet-name>Product</servlet-name>
+		<servlet-class>com.servlet.ProductServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Product</servlet-name>
+		<url-pattern>/product</url-pattern>
+	</servlet-mapping>
 
 
 </web-app>

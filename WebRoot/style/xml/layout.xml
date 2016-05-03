@@ -8,6 +8,9 @@
 			   <leaf id="1.1.2" name="用户管理" url="powerManage/Usermanage.jsp" />
 			   <leaf id="1.1.3" name="修改密码" url="powerManage/ModifyPwd.jsp" />
 			   <leaf id="1.1.4"  name="角色管理" url="powerManage/Rolemanage.jsp" />
+			</folder>  
+		    <folder id="1.2" name="货品">
+		       <leaf id="1.2.1" name="商品管理" url="powerManage/Product.jsp" />
 			</folder>   
 		</tree>
 		

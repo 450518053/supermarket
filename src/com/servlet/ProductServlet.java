@@ -32,26 +32,37 @@ public class ProductServlet extends HttpServlet {
 	
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException,
 																		IOException {
-		resp.setCharacterEncoding("UTF-8"); //设置字符集
-		PrintWriter out = resp.getWriter();
-		String prodName = req.getParameter("prod_name");
-		Product prodParam = new Product();
-		prodParam.setProdName(prodName);
-		int rows = Integer.parseInt(req.getParameter("rows"));
-		int page = Integer.parseInt(req.getParameter("page"));
-		JsonData json = new JsonData();
-		json.setTotal(prodDAO.getCount(prodParam));
-		json.setRows(prodDAO.getProds(prodParam, rows, page));
-		Gson gson = new Gson();
-		out.println(gson.toJson(json));
-		out.flush();
-		out.close();
-		
+		this.doGet(req, resp);
 	}
 	
 	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException,
 																		IOException {
-		super.doPost(req, resp);
+		resp.setCharacterEncoding("UTF-8"); //设置字符集
+		String type = req.getParameter("type");
+		switch (Integer.valueOf(type)) {
+			case 1:
+				PrintWriter out = resp.getWriter();
+				String prodName = req.getParameter("prodName");
+				String prodNo = req.getParameter("prodNo");
+				String commoNo = req.getParameter("commoNo");
+				Product prodParam = new Product();
+				prodParam.setProdName(prodName);
+				prodParam.setProdNo(prodNo);
+				prodParam.setCommoNo(commoNo);
+				int rows = Integer.parseInt(req.getParameter("rows"));
+				int page = Integer.parseInt(req.getParameter("page"));
+				JsonData json = new JsonData();
+				json.setTotal(prodDAO.getCount(prodParam));
+				json.setRows(prodDAO.getProds(prodParam, rows, page));
+				Gson gson = new Gson();
+				out.println(gson.toJson(json));
+				out.flush();
+				out.close();
+				break;
+			default:
+				break;
+		}
+		
 	}
 	
 }

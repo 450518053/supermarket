@@ -38,18 +38,15 @@ table td{
 		<form id="queryForm">
 			<table style="margin-left: 20px;margin-top: 20px;font-size: 13px;font-family: 微软雅黑;">
 				<tr>
-					<td>用户ID：<input type="text" id="user_id" name="user_id"
+					<td>货品ID：<input type="text" id="commoNo" name="commoNo"
 						style="width:150px;" class="easyui-textbox" validType="length[0,20]">
 					</td>
-					<td>姓名：<input type="text" id="user_name" name="user_name"
+					<td>商品ID：<input type="text" id="prodNo" name="prodNo"
 						style="width:150px;" class="easyui-textbox" validType="length[0,20]">
 					</td>
-					<td>用户类型： <select id="user_type" name="user_type"
-						style="width:150px;" class="easyui-combobox" editable="false">
-							<option value="">请选择</option>
-							<option value="0">操作员</option>
-							<option value="1">管理员</option>
-					</select></td>
+					<td>商品名：<input type="text" id="prodName" name="prodName"
+						style="width:150px;" class="easyui-textbox" validType="length[0,20]">
+					</td>
 				</tr>
 			</table>
 		</form>

@@ -13,26 +13,13 @@ $(function(){
 		remoteSort : false,
 		//frozenColumns: [[{ field: 'ck', checkbox: true}]],
 		columns:[[ 
-		          {field:'userId',align : 'center',title:'用户ID',width:150,editor:'text'}, 
-		        	  {field:'userName',align : 'center',title:'姓名',width:100, editor:'text'},
-		        	  {field:'userType',align : 'center',title:'用户类型',width:150, editor:'text',
-		        		  formatter : function(value) {
-		        			  if (value == '0') {
-		        				  return " <span style='color:red;'>操作员</span>";
-		        			  } else if(value == '1') {
-		        				  return " <span style='color:green;'>管理员</span>";
-		        			  }
-		        		  }},
-		        		  {field:'state',align : 'center',title:'状态',width:150,editor:'text',
-		        			  formatter : function(value) {
-		        				  if (value == '0') {
-		        					  return " <span style='color:red;'>已注销</span>";
-		        				  } else if(value == '1'){
-		        					  return " <span style='color:green;'>使用中</span>";
-		        				  }
-		        			  }}, 
-		        			  {field:'unregister',align : 'center',title:'注销人',width:100,editor:'text'}, 
-		        			  {field:'unregistTime',align : 'center',title:'注销时间',width:180,editor:'text'}
+		          {field:'commoNo',align : 'center',title:'货品ID',width:150,editor:'text'}, 
+		          {field:'prodNo',align : 'center',title:'商品ID',width:150,editor:'text'}, 
+		          {field:'prodName',align : 'center',title:'商品名',width:150,editor:'text'}, 
+		          {field:'prop',align : 'center',title:'规格',width:150,editor:'text'}, 
+		          {field:'marketPrice',align : 'center',title:'市场价',width:150,editor:'text'}, 
+		          {field:'sellPrice',align : 'center',title:'卖价',width:150,editor:'text'}, 
+		          {field:'salesVolume',align : 'center',title:'销量',width:150,editor:'text'}
 		        			  ]], 
 		        			  pagination:true,  //分页控件
 		        			  rownumbers:true,//行号
@@ -57,9 +44,9 @@ $(function(){
 /**查询用户列表*/
 function query(){
 	$('#show_data').datagrid('load',{
-		user_id:$('#user_id').val(),
-		user_name:$('#user_name').val(),
-		user_type:$('#user_type').combobox('getValue')
+		commoNo:$('#commoNo').val(),
+		prodNo:$('#prodNo').val(),
+		prodName:$('#prodName').val()
 	});
 }
 /**重置表单*/

@@ -261,6 +261,17 @@
 		<servlet-name>Product</servlet-name>
 		<url-pattern>/product</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<description>销售处理</description>
+		<servlet-name>seal</servlet-name>
+		<servlet-class>com.servlet.SealProductServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>seal</servlet-name>
+		<url-pattern>/seal</url-pattern>
+	</servlet-mapping>
 
 
 </web-app>

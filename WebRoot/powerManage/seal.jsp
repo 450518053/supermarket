@@ -53,6 +53,7 @@ table td {
 					<td>商品名：</td>
 					<td><select style="width: 150px;" id="product" name="product"
 						onchange="change()">
+						<option value="" id="temp"></option>
 							<c:forEach items="${products}" var="info" varStatus="status"
 								begin="0">
 								<option value="${status.index}">${info.prodName}</option>
@@ -75,20 +76,26 @@ table td {
 			</table>
 		</form>
 		&nbsp;
-		<div style="margin-left: 25%;">
+		
+	</div>
+	
+	<div style="margin-left: 25%;">
 			<a href="#" onclick="query();" class="button blue">添加</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
 				href="#" onclick="resetForm();" class="button blue">重置</a>
 		</div>
-	</div>
 
 	<div
 		style="width: 75%;padding-bottom: 20px; position:relative; left:20%; margin-top:50px">
 		<form id="submitform">
-			<table style="margin-left: 5%;margin-top: 20px;font-size: 13px;font-family: 微软雅黑;" id="submit">
-				<tr style="display: none"><td><input class="easyui-textbox" style="display: none" name="size",id="size"></input></td></tr>
+			<table border="1px" style="margin-left: 5%;margin-top: 20px;font-size: 13px;font-family: 微软雅黑;" id="submit">
+				<tr style="display: none"><td><input class="easyui-textbox" style="display: none" name="size" id="size"></input></td></tr>
 				<tr><td>商品名</td><td>规格</td><td>数量</td><td>总价</td></tr>
 			</table>
 		</form>
+		</div>
+		
+		<div style="margin-left: 25%;">
+			<a href="#" onclick="tijiao();" class="button blue">提交</a>	
 		</div>
 
 
@@ -127,9 +134,10 @@ table td {
 			var prop = $("#prop").val();
 			var num = $("#num").val();
 			var totle = (num*$("#sellPrice").val()).toFixed(2);
+			var commoNo = $("#commoNo").val();
+			var prodNo = $("#prodNo").val();
 			$("#submit").append("<tr><td><input name='prodName"+size+"' value='"+prodName+"'/></td><td><input name='prop"+size+"' value='"+prop+"' /></td><td><input name='num"+size+"' value='"+num+"'/></td><td><input name='totle"+size+"' value='"+totle+"'/></td></tr>");
-			
-			
+			$("#submit").append("<tr style='display: none'><td><input name='commoNo"+size+"' value='"+commoNo+"'/></td><td><input name='prodNo"+size+"' value='"+prodNo+"'/></td></tr>");
 			size++;
 			
 
@@ -149,7 +157,22 @@ table td {
 		$("#sellPrice").textbox('setValue', sellPrice[num]);
 		$("#commoNo").textbox('setValue', commoNo[num]);
 		$("#prodNo").textbox('setValue', prodNo[num]);
+		$("#num").textbox('setValue', "");
 
+	}
+	function tijiao(){
+	$.ajax({
+			url : basepath + 'seal',
+			type : "POST",
+			data : $('#submitform').serialize(),
+			success : function(data) {
+				if(data.trim() == "success"){
+					alert("销售成功!");
+				}else{
+					alert("销售异常,请联系管理员!");
+				}
+			}
+		});
 	}
 </script>
 </html>

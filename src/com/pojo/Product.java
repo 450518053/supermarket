@@ -82,5 +82,16 @@ public class Product {
 	public void setSalesVolume(int salesVolume) {
 		this.salesVolume = salesVolume;
 	}
+
+	/**
+	 * @return
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Product [commoNo=" + commoNo + ", prodNo=" + prodNo + ", prodName=" + prodName
+				+ ", prop=" + prop + ", marketPrice=" + marketPrice + ", sellPrice=" + sellPrice
+				+ ", salesVolume=" + salesVolume + "]";
+	}
 	
 }

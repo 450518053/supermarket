@@ -17,5 +17,10 @@
 		<tree id="2" name="数据分析">
 		    <folder id="2.1" name="客户行为数据分析"  url="powerManage/dataAnalysis.jsp"></folder>
 		</tree>
+		
+		<tree id="3" name="销售模块">
+		    <folder id="3.1" name="产品销售"  url="seal/jsp"></folder>
+		</tree>
+		
 	</trees>
 </layout>

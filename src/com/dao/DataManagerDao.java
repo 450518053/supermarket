@@ -19,7 +19,7 @@ public class DataManagerDao {
 		List<String> list = new ArrayList<String>();
 		int temp = 0;
 		Connection con = ConnectionUtil.getDBConnection();
-		StringBuffer sql = new StringBuffer("select a.commo_name,b.order_no from sell_order b,order_item a where a.order_no = b.order_no and b.create_time BETWEEN ? and ?;");
+		StringBuffer sql = new StringBuffer("select a.commo_name, a.order_no from order_item a,sell_order b where a.order_no = b.order_no and b.create_time BETWEEN ? and ?;");
 		PreparedStatement pstmt;
 		try {
 			pstmt = con.prepareStatement(sql.toString());
@@ -38,7 +38,7 @@ public class DataManagerDao {
 						list.add(rs.getString("commo_name"));
 					}else{
 						lists.add(list);
-						list.clear();
+						list = new ArrayList<String>();
 						list.add(rs.getString("commo_name"));
 					}
 					

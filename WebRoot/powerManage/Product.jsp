@@ -59,7 +59,9 @@ table td{
 			<a href="#" onclick="addProduct();" class="easyui-linkbutton"
 				data-options="iconCls:'icon-add',plain:true">新增</a> <a href="#"
 				onclick="modifyProduct();" class="easyui-linkbutton"
-				data-options="iconCls:'icon-edit',plain:true">修改</a> 
+				data-options="iconCls:'icon-edit',plain:true">修改</a> <a href="#"
+				onclick="deleteProduct();" class="easyui-linkbutton"
+				data-options="iconCls:'icon-del',plain:true">删除</a> 
 		</div>
 	</div>
 
@@ -114,7 +116,7 @@ $(function(){
 		} 
 	}); 
 }); 
-/**查询用户列表*/
+/**查询商品列表*/
 function query(){
 	$('#show_data').datagrid('load',{
 		commoNo:$('#commoNo').val(),
@@ -136,14 +138,14 @@ function modifyProduct(){
 		alert('选择了多条记录,只能选择一条记录操作!');
 	}else{
 		$('#add_dialog').dialog({
-			title: '当前商品ID：'+rows[0].userId,
+			title: '当前商品ID：'+rows[0].prodNo,
 			closed:true,
 			resizable: true,
 			width: 600,
 			height: 400,
 			left:90,
 			modal: true,
-			href: basepath+'product?prodNo='+rows[0].prodNo,
+			href: basepath+'product?type=1&prodNo='+rows[0].prodNo,
 			onClose:function(){
 				$('#show_data').datagrid('reload');
 			}
@@ -169,5 +171,36 @@ function addProduct(){
 	$('#add_dialog').dialog('open');
 }
 
+/**删除*/
+function deleteProduct(){
+	var rows=$("#show_data").datagrid('getSelections');
+	var num=rows.length;
+	if(num==0){
+		alert('请选择一条记录进行操作!');
+	}else if(num>1){
+		alert('选择了多条记录,只能选择一条记录操作!');
+	}else{
+		$.messager.confirm('温馨提示', '你确定要删除该商品吗?', function (r) {  
+			if(r){
+				$.ajax({
+					url:basepath+'product?type=2&prodNo='+rows[0].prodNo,
+					type : "POST",
+					data : {user_id:rows[0].userId},
+					success : function(data) {
+						if(data.trim()=='success'){
+							alert("操作成功!"); 
+							$('#show_data').datagrid('reload');
+						}else{
+							alert("操作失败!"); 
+						}
+					},
+					failure:function(){   
+						alert('操作失败，请重试！');    
+					}
+				});
+			}
+		});
+	}
+}
 </script>
 </html>

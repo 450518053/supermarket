@@ -9,11 +9,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.dao.ProductManagerDao;
-import com.dao.UserMangerDao;
 import com.google.gson.Gson;
 import com.json.pojo.JsonData;
 import com.pojo.Product;
-import com.pojo.UUserLogin;
 
 /**                    
  * @Filename ProductServlet.java
@@ -34,10 +32,20 @@ public class ProductServlet extends HttpServlet {
 	
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException,
 																		IOException {
+		String type = req.getParameter("type");
 		String prodNo = req.getParameter("prodNo");
-		System.out.println(prodDAO.getById(prodNo));
-		req.getSession().setAttribute("bean", prodDAO.getById(prodNo));
-		req.getRequestDispatcher("../powerManage/UpdateProduct.jsp").forward(req,resp);
+		switch (Integer.valueOf(type)) {
+			case 1://to 修改
+				req.getSession().setAttribute("bean", prodDAO.getById(prodNo));
+				req.getRequestDispatcher("/powerManage/UpdateProduct.jsp").forward(req, resp);
+				break;
+			case 2://删除
+				PrintWriter out = resp.getWriter();
+				out.println(prodDAO.deleteById(prodNo) ? "success" : "error");
+				out.flush();
+				out.close();
+				break;
+		}
 	}
 	
 	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException,
@@ -69,7 +77,7 @@ public class ProductServlet extends HttpServlet {
 			case 2://新增、修改	提交
 				String prop = req.getParameter("prop");
 				double marketPrice = Double.valueOf(req.getParameter("marketPrice"));
-				double sellPrice =  Double.valueOf(req.getParameter("sellPrice"));
+				double sellPrice = Double.valueOf(req.getParameter("sellPrice"));
 				int salesVolume = Integer.valueOf(req.getParameter("salesVolume"));
 				out = resp.getWriter();
 				prodParam = new Product();
@@ -80,11 +88,9 @@ public class ProductServlet extends HttpServlet {
 				prodParam.setProp(prop);
 				prodParam.setSellPrice(sellPrice);
 				prodParam.setSalesVolume(salesVolume);
-				out.println(prodDAO.update(prodParam)?"success":"error");
+				out.println(prodDAO.update(prodParam) ? "success" : "error");
 				out.flush();
 				out.close();
-				break;
-			default:
 				break;
 		}
 		

@@ -3,6 +3,7 @@ package com.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -142,7 +143,7 @@ public class ProductManagerDao {
 		return false;
 	}
 	
-	public Product getById(String prodNo){
+	public Product getById(String prodNo) {
 		String sql = "select * from product where prod_no = ?";
 		Product prod = null;
 		PreparedStatement pstmt = null;
@@ -168,4 +169,33 @@ public class ProductManagerDao {
 		}
 		return prod;
 	}
+	
+	public boolean deleteById(String prodNo) {
+		String sql = "delete from product where prod_no = ?";
+		PreparedStatement pstmt = null;
+		Connection con = null;
+		try {
+			con = ConnectionUtil.getDBConnection();
+			pstmt = con.prepareStatement(sql.toString());
+			pstmt.setInt(1, Integer.valueOf(prodNo));
+			return pstmt.executeUpdate() != 0;
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (pstmt != null) {
+				try {
+					pstmt.close();
+				} catch (SQLException e) {
+				}
+			}
+			if (con != null) {
+				try {
+					con.close();
+				} catch (SQLException e) {
+				}
+			}
+		}
+		return false;
+	}
+	
 }

@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.dao.UserMangerDao;
+import com.pojo.UUserLogin;
 
 /**   
  * @ClassName: UserActivetyServlet  
@@ -30,11 +31,12 @@ public class UserActivetyServlet extends HttpServlet{
 	public void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		resp.setCharacterEncoding("UTF-8");  //设置字符集
+		UUserLogin user = (UUserLogin) req.getSession().getAttribute("userinfo");
 		PrintWriter out = resp.getWriter();
 		String user_id = req.getParameter("user_id");
 		String state = req.getParameter("state");
 		
-		boolean flag = new UserMangerDao().userActivity(user_id, state);
+		boolean flag = new UserMangerDao().userActivity(user_id, state,user.getUserId());
 		if(flag){
 			out.println("success".trim());
 		}else{

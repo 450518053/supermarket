@@ -54,11 +54,11 @@ public class UserMangerDao {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-		
+
+
 		return user;
 	}
-	
+
 	/**
 	 * 
 	 * @Method: updateStateAndIP    
@@ -81,14 +81,14 @@ public class UserMangerDao {
 			pstmt.setString(3, CommonUtil.getNowDate());
 			pstmt.setString(4, userId);
 			pstmt.executeUpdate();
-			
+
 			pstmt.close();
 			con.close();
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
+
 	/**
 	 * 
 	 * @Method: getUserAutoList    
@@ -124,7 +124,7 @@ public class UserMangerDao {
 		}
 		return list;
 	}
-	
+
 	/**
 	 * 
 	 * @Method: queryUserId    
@@ -149,13 +149,13 @@ public class UserMangerDao {
 			}
 			pstmt.close();
 			con.close();
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return id;
 	}
-	
+
 	/**
 	 * 
 	 * @Method: register    
@@ -189,7 +189,7 @@ public class UserMangerDao {
 		}
 		return flag;
 	}
-	
+
 	/**
 	 * 
 	 * @Method: getUserCount    
@@ -204,7 +204,7 @@ public class UserMangerDao {
 	 */
 	public int getUserCount(String user_id,String user_name,String user_type){
 		int count = 0;
-		
+
 		Connection con = ConnectionUtil.getDBConnection();
 		StringBuffer sql = new StringBuffer("select count(1) as allcount from u_user_login where 1=1");
 		if(user_id != null && !user_id.equals("")){
@@ -229,10 +229,10 @@ public class UserMangerDao {
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return count;
 	}
-	
+
 	/**
 	 * 
 	 * @Method: getUsers    
@@ -291,7 +291,7 @@ public class UserMangerDao {
 		}
 		return list;
 	}
-	
+
 	/**
 	 * 
 	 * @Method: selectUserById    
@@ -324,13 +324,13 @@ public class UserMangerDao {
 			}
 			pstmt.close();
 			con.close();
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return user;
 	}
-	
+
 	/**
 	 * 
 	 * @Method: updateUser    
@@ -354,18 +354,18 @@ public class UserMangerDao {
 			pstmt.setString(2, dept);
 			pstmt.setString(3, user_id);
 			pstmt.executeUpdate();
-			
+
 			pstmt.close();
 			con.close();
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
 		flag = true;
-		
+
 		return flag;
-		
+
 	}
-	
+
 	/**
 	 * 
 	 * @Method: restPassword    
@@ -387,17 +387,17 @@ public class UserMangerDao {
 			pstmt.setString(1, password);
 			pstmt.setString(2, user_id);
 			pstmt.executeUpdate();
-			
+
 			pstmt.close();
 			con.close();
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
 		flag = true;
-		
+
 		return flag;
 	}
-	
+
 	/**
 	 * 
 	 * @Method: restPassword    
@@ -409,27 +409,44 @@ public class UserMangerDao {
 	 * @return       
 	 * @throws
 	 */
-	public boolean userActivity(String user_id,String state){
+	public boolean userActivity(String user_id,String state,String user){
 		boolean flag = false;
 		Connection con = ConnectionUtil.getDBConnection();
-		String sql = "update  u_user_login set state = ? where user_id = ?";
-		PreparedStatement pstmt;
-		try {
-			pstmt = con.prepareStatement(sql);
-			pstmt.setString(1, state);
-			pstmt.setString(2, user_id);
-			pstmt.executeUpdate();
-			
-			pstmt.close();
-			con.close();
-		}catch (Exception e) {
-			e.printStackTrace();
+		if(state.equals("1")){
+			String sql = "update  u_user_login set state = ? where user_id = ?";
+			PreparedStatement pstmt;
+			try {
+				pstmt = con.prepareStatement(sql);
+				pstmt.setString(1, state);
+				pstmt.setString(2, user_id);
+				pstmt.executeUpdate();
+
+				pstmt.close();
+				con.close();
+			}catch (Exception e) {
+				e.printStackTrace();
+			}
+		}else{
+			String sql = "update  u_user_login set state = ?,unregister = ?,unregist_time = NOW() where user_id = ?";
+			PreparedStatement pstmt;
+			try {
+				pstmt = con.prepareStatement(sql);
+				pstmt.setString(1, state);
+				pstmt.setString(2, user);
+				pstmt.setString(3, user_id);
+				pstmt.executeUpdate();
+
+				pstmt.close();
+				con.close();
+			}catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
 		flag = true;
-		
+
 		return flag;
 	}
-	
+
 	/**
 	 * 
 	 * @Method: haveRolelist    
@@ -457,13 +474,13 @@ public class UserMangerDao {
 			}
 			pstmt.close();
 			con.close();
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return list;
 	}
-	
+
 	/**
 	 * 
 	 * @Method: lackRolelist    
@@ -491,13 +508,13 @@ public class UserMangerDao {
 			}
 			pstmt.close();
 			con.close();
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return list;
 	}
-	
+
 	/**
 	 * 
 	 * @Method: insertUserRole    
@@ -524,7 +541,7 @@ public class UserMangerDao {
 			e.printStackTrace();
 		}
 	}
-	
+
 	/**
 	 * 
 	 * @Method: deleteUserRole    
@@ -553,5 +570,5 @@ public class UserMangerDao {
 			e.printStackTrace();
 		}
 	}
-	
+
 }

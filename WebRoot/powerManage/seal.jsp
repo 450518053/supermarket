@@ -136,7 +136,7 @@ table td {
 			var totle = (num*$("#sellPrice").val()).toFixed(2);
 			var commoNo = $("#commoNo").val();
 			var prodNo = $("#prodNo").val();
-			$("#submit").append("<tr><td><input name='prodName"+size+"' value='"+prodName+"'/></td><td><input name='prop"+size+"' value='"+prop+"' /></td><td><input name='num"+size+"' value='"+num+"'/></td><td><input name='totle"+size+"' value='"+totle+"'/></td></tr>");
+			$("#submit").append("<tr><td><input readOnly='true' name='prodName"+size+"' value='"+prodName+"'/></td><td><input readOnly='true' name='prop"+size+"' value='"+prop+"' /></td><td><input readOnly='true' name='num"+size+"' value='"+num+"'/></td><td><input readOnly='true' name='totle"+size+"' value='"+totle+"'/></td></tr>");
 			$("#submit").append("<tr style='display: none'><td><input name='commoNo"+size+"' value='"+commoNo+"'/></td><td><input name='prodNo"+size+"' value='"+prodNo+"'/></td></tr>");
 			size++;
 			

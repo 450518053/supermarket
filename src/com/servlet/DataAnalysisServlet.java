@@ -420,15 +420,19 @@ public class DataAnalysisServlet extends HttpServlet{
 			 
 			 List<String> key = entry.getKey() ;
 			 Integer value = entry.getValue() ;
-			 
-			 sb.append("商品分析 :");
+			 if(key.size()<=1){
+				 sb.append("热门商品 :");
+			 }else{
+				 sb.append("热门组合 :");
+			 }
+			
 			 
 			 for ( int i = 0 ; i < key.size() ; i++ )
 			 {
 				 sb.append(key.get(i));
 				 sb.append(" ");
 			 }
-			 sb.append("阙值 : "+ value.intValue());
+//			 sb.append("阙值 : "+ value.intValue());
 			 sb.append("\r\n");
 		 }
 		 return sb;
